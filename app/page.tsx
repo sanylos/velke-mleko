@@ -1,56 +1,72 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="milk-gradient py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col gap-6 items-center text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue-900">
-              VELKÉ MLÉKO
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-800/80 max-w-2xl">
-              Poznejte fascinující svět mléka - zdroj života, výživy a zdraví
-            </p>
+      <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-24 sm:py-32">
+        <div className="absolute inset-0 bg-[url('/milk-pattern.png')] opacity-10"></div>
+        <div className="relative max-w-6xl mx-auto px-4">
+          <div className="flex flex-col gap-8 items-center text-center">
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue-900 tracking-tight">
+                VELKÉ MLÉKO
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-800/80 max-w-2xl mx-auto leading-relaxed">
+                Poznejte fascinující svět mléka - zdroj života, výživy a zdraví
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a href="#kvalita" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors font-medium">
+                Začít studovat
+              </a>
+              <a href="#typy" className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-full hover:bg-blue-50 transition-colors font-medium border border-blue-200">
+                Prozkoumat témata
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Info Cards */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">Klíčová témata</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-card p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <img src="/icons/composition.svg" alt="Složení mléka" className="w-8 h-8 mr-3" />
+            <div className="group bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+                  <img src="/icons/composition.svg" alt="Složení mléka" className="w-6 h-6 group-hover:brightness-200" />
+                </div>
                 <h3 className="text-2xl font-semibold text-blue-900">Složení mléka</h3>
               </div>
-              <p className="text-gray-700">
+              <p className="text-gray-700 leading-relaxed">
                 Mléko je komplexní potravina obsahující proteiny, tuky, laktózu,
                 minerály a vitamíny. Každá složka hraje důležitou roli v nutričním
                 profilu a vlastnostech mléka.
               </p>
             </div>
 
-            <div className="glass-card p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <img src="/icons/enzyme.svg" alt="Enzymy v mléce" className="w-8 h-8 mr-3" />
+            <div className="group bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+                  <img src="/icons/enzyme.svg" alt="Enzymy v mléce" className="w-6 h-6 group-hover:brightness-200" />
+                </div>
                 <h3 className="text-2xl font-semibold text-blue-900">Enzymy v mléce</h3>
               </div>
-              <p className="text-gray-700">
+              <p className="text-gray-700 leading-relaxed">
                 Enzymy jsou přirozenou součástí mléka a mají vliv na jeho
                 skladovatelnost a zpracování. Mezi hlavní enzymy patří lipázy,
                 proteázy a další bioaktivní složky.
               </p>
             </div>
 
-            <div className="glass-card p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <img src="/icons/microbiology.svg" alt="Mikrobiologie mléka" className="w-8 h-8 mr-3" />
+            <div className="group bg-white p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+                  <img src="/icons/microbiology.svg" alt="Mikrobiologie mléka" className="w-6 h-6 group-hover:brightness-200" />
+                </div>
                 <h3 className="text-2xl font-semibold text-blue-900">Mikrobiologie mléka</h3>
               </div>
-              <p className="text-gray-700">
+              <p className="text-gray-700 leading-relaxed">
                 Mikrobiologická kvalita mléka je klíčová pro jeho bezpečnost
                 a trvanlivost. Zahrnuje jak prospěšné bakterie mléčného kvašení,
                 tak i potenciální kontaminanty.
@@ -131,28 +147,48 @@ export default function Home() {
       </section>
 
       {/* Statistiky */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
-            Spotřeba a produkce mléka v ČR
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+              Spotřeba a produkce mléka v ČR
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Klíčové ukazatele mlékárenského průmyslu v České republice
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+            <div className="group bg-white shadow-lg rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-300">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">95,9 %</div>
-                <p className="text-gray-700">Tržnost mléka</p>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <svg className="w-8 h-8 text-blue-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                  </svg>
+                </div>
+                <div className="text-4xl font-bold text-blue-600 mb-3">95,9 %</div>
+                <p className="text-gray-700 text-lg">Tržnost mléka</p>
               </div>
             </div>
-            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+            <div className="group bg-white shadow-lg rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-300">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">263 kg</div>
-                <p className="text-gray-700">Spotřeba mléčných výrobků na obyvatele<br />(bez másla)</p>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <svg className="w-8 h-8 text-blue-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                  </svg>
+                </div>
+                <div className="text-4xl font-bold text-blue-600 mb-3">263 kg</div>
+                <p className="text-gray-700 text-lg">Spotřeba mléčných výrobků<br />na obyvatele</p>
               </div>
             </div>
-            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+            <div className="group bg-white shadow-lg rounded-2xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-300">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">134 %</div>
-                <p className="text-gray-700">Soběstačnost v mléce</p>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <svg className="w-8 h-8 text-blue-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                  </svg>
+                </div>
+                <div className="text-4xl font-bold text-blue-600 mb-3">134 %</div>
+                <p className="text-gray-700 text-lg">Soběstačnost v mléce</p>
               </div>
             </div>
           </div>
@@ -196,6 +232,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Alergie a intolerance */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
+            Alergie a intolerance
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">Alergie na mléčnou bílkovinu</h3>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Tělo reaguje na přítomnost mléčných bílkovin (zejména kasein a syrovátkové bílkoviny).
+                </p>
+                <p>
+                  Imunitně podmíněná reakce → může vést ke zhoršené toleranci mléka a mléčných produktů.
+                </p>
+                <p>
+                  Uváděna jako samostatná zdravotní komplikace v rámci technologické kvality mléka.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">Laktózová intolerance</h3>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Porucha štěpení laktózy kvůli nedostatku enzymu laktáza.
+                </p>
+                <p>
+                  Význam laktózy: slouží jako substrát pro růst mikroorganismů, je redukující disacharid
+                  s omezenou rozpustností (→ nutnost řízené krystalizace).
+                </p>
+                <p>
+                  V prezentacích je zdůrazněna technologická důležitost laktózy, ne její intolerance – ale
+                  její absence/porucha trávení má výživový dopad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technologické vlastnosti */}
       <section className="py-16 bg-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -226,22 +304,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="milk-gradient py-16">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6">
-            Chcete se dozvědět více o mléce?
-          </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Prozkoumejte naše vzdělávací materiály a objevte fascinující svět
-            mlékárenství a zpracování mléka.
-          </p>
-          <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-            Prozkoumat materiály
-          </button>
         </div>
       </section>
     </div>
