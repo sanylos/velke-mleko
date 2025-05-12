@@ -15,11 +15,13 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="#kvalita" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors font-medium">
-                Začít studovat
+              <a href="#temata" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors font-medium">
+                <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                </svg>
               </a>
-              <a href="#typy" className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-full hover:bg-blue-50 transition-colors font-medium border border-blue-200">
-                Prozkoumat témata
+              <a href="#statistiky" className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-full hover:bg-blue-50 transition-colors font-medium border border-blue-200">
+                Statistiky v ČR
               </a>
             </div>
           </div>
@@ -27,7 +29,7 @@ export default function Home() {
       </section>
 
       {/* Info Cards */}
-      <section className="py-20">
+      <section className="py-20" id="temata">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">Klíčová témata</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -154,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* Statistiky */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-blue-50 to-white" id="statistiky">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
@@ -191,7 +193,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   <svg className="w-8 h-8 text-blue-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125-1.125V4.125z" />
                   </svg>
                 </div>
                 <div className="text-4xl font-bold text-blue-600 mb-3">134 %</div>
@@ -308,6 +310,44 @@ export default function Home() {
                     <li>- 85 °C / 5 s (vysoká)</li>
                   </ul>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Somatické buňky */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
+            Somatické buňky v mléce
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">Co jsou somatické buňky?</h3>
+              <p className="text-gray-700">
+                Somatické buňky jsou buňky tělesné tkáně, které se přirozeně vyskytují v mléce.
+                Jejich počet je důležitým ukazatelem zdravotního stavu mléčné žlázy a kvality mléka.
+              </p>
+            </div>
+
+            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">Význam pro kvalitu</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li>• {"<"} 200 000 buněk/ml: Výborná kvalita</li>
+                <li>• 200 000 - 400 000 buněk/ml: Dobrá kvalita</li>
+                <li>• {">"} 400 000 buněk/ml: Zvýšený počet</li>
+                <li>• {">"} 800 000 buněk/ml: Indikace mastitidy</li>
+              </ul>
+            </div>
+
+            <div className="bg-white shadow-lg rounded-xl p-8 border border-blue-100">
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4">Aspekty sledování</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li>• Zdravotní stav dojnic</li>
+                <li>• Ekonomika produkce</li>
+                <li>• Technologická zpracovatelnost</li>
+                <li>• Kvalita mléčných výrobků</li>
               </ul>
             </div>
           </div>
