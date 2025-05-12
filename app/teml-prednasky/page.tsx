@@ -8,19 +8,19 @@ export default function TemlPrednaskyPage() {
           Přehled přednášek
         </h2>
         <div className="space-y-6">          <div className="bg-white shadow-lg rounded-xl p-6 border border-blue-100 hover:shadow-xl transition-shadow">
-            <div className="flex items-center mb-4">
-              <span className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">1</span>
-              <h3 className="text-xl font-semibold text-blue-900">
-                Úvod do problematiky mléka
-              </h3>
-            </div>
-            <ul className="list-disc pl-6 space-y-3 text-gray-700">
-              <li>Historie mlékařství</li>
-              <li>Význam mléka ve výživě</li>
-              <li>Současné trendy v mlékárenství</li>
-              <li>Legislativní požadavky</li>
-            </ul>
+          <div className="flex items-center mb-4">
+            <span className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">1</span>
+            <h3 className="text-xl font-semibold text-blue-900">
+              Úvod do problematiky mléka
+            </h3>
           </div>
+          <ul className="list-disc pl-6 space-y-3 text-gray-700">
+            <li>Historie mlékařství</li>
+            <li>Význam mléka ve výživě</li>
+            <li>Současné trendy v mlékárenství</li>
+            <li>Legislativní požadavky</li>
+          </ul>
+        </div>
 
           <div className="glass-card p-6 rounded-xl">
             <h3 className="text-xl font-semibold text-blue-700 mb-3">
